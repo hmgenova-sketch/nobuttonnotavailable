@@ -7,45 +7,46 @@
   <style>
     body {
       margin: 0;
-      height: 1000vh;
+      height: 100vh;
       background: #f6c1d1;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: "Arial", sans-serif;
+      font-family: Arial, sans-serif;
     }
 
     .card {
       background: #f9f9f9;
-      width: 4200px;
-      padding: 30px 20px 40px;
-      border-radius: 20px;
+      width: 650px;
+      min-height: 420px;
+      padding: 40px 30px 50px;
+      border-radius: 30px;
       text-align: center;
       position: relative;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.18);
     }
 
     .cat {
-      font-size: 60px;
-      margin-bottom: 10px;
+      font-size: 80px;
+      margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 22px;
-      margin-bottom: 30px;
+      font-size: 32px;
+      margin-bottom: 50px;
       color: #222;
     }
 
     .buttons {
       position: relative;
-      height: 120px;
+      height: 160px;
     }
 
     button {
       border: none;
-      font-size: 18px;
+      font-size: 24px;
       cursor: pointer;
-      padding: 15px 40px;
+      padding: 20px 55px;
       border-radius: 999px;
       position: absolute;
     }
@@ -53,20 +54,20 @@
     #yes {
       background: #e91e63;
       color: white;
-      left: 400px;
-      top: 400px;
+      left: 100px;
+      top: 50px;
     }
 
     #no {
       background: #e0e0e0;
       color: #333;
-      right: 400px;
-      top: 450px;
+      right: 100px;
+      top: 55px;
     }
 
     .note {
-      margin-top: 20px;
-      font-size: 14px;
+      margin-top: 30px;
+      font-size: 18px;
       color: #666;
     }
   </style>
@@ -93,7 +94,7 @@
       const card = document.querySelector(".card");
 
       const maxX = card.offsetWidth - noBtn.offsetWidth - 20;
-      const maxY = card.offsetHeight - noBtn.offsetHeight - 80;
+      const maxY = card.offsetHeight - noBtn.offsetHeight - 100;
 
       const x = Math.random() * maxX;
       const y = Math.random() * maxY;
@@ -105,7 +106,7 @@
     function yesClicked() {
       document.body.innerHTML = `
         <div style="
-          height:1000vh;
+          height:100vh;
           display:flex;
           align-items:center;
           justify-content:center;
@@ -114,8 +115,8 @@
           text-align:center;
         ">
           <div>
-            <h1>YAY! 🎉💖</h1>
-            <p>Best decision ever 😌</p>
+            <h1 style="font-size:48px;">YAY! 🎉💖</h1>
+            <p style="font-size:22px;">Best decision ever 😌</p>
           </div>
         </div>
       `;
